@@ -142,7 +142,7 @@ void psmc_avg_t(const psmc_par_t *pp, const psmc_data_t *pd, double *avg_t)
 	for (k = 0; k <= n; ++k)
 		lambda[k] = pd->params[pp->par_map[k] + PSMC_N_PARAMS];
 	if (pp->flag & PSMC_F_DIVERG) {
-		dt = pd->params[pd->n_params - 1];
+		// dt = pd->params[pd->n_params - 1];
 		if (dt < 0) dt = 0;
 	}
 	for (k = 0; k <= n; ++k) tau[k] = pd->t[k+1] - pd->t[k];
